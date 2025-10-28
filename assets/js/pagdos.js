@@ -11,12 +11,14 @@ const productos = [
     "Jean Azul Claro##Jean claro corte recto##./assets/img/pantalon/pantalon2.jpg"
   ],
   [
-    "Short con Tiras##Short deportivo con tiras##./assets/img/pantalon/pantalon3.jpg##Precio",
     "Short Negro##Short negro estilo básico##./assets/img/short/short1/1.jpg°°./assets/img/short/short1/2.jpg",
     "Short Común Azul##Short azul casual verano##./assets/img/short/short2/1.jpg°°./assets/img/short/short2/2.jpg°°./assets/img/short/short2/3.jpg",
-    "Short Corte Liso 4##Short liso color claro##./assets/img/short/short3/1.jpg°°./assets/img/short/short3/2.jpg",
-    "Short con Tiras Claro 4##Short claro con tiras##./assets/img/short/short6/1.jpg°°./assets/img/short/short6/2.jpg",
-    "Short Claro 4##Short claro estilo simple##./assets/img/short/short6/1.jpg°°./assets/img/short/short6/2.jpg"
+    "Short Corte Liso##Short liso color claro##./assets/img/short/short3/1.jpg°°./assets/img/short/short3/2.jpg",
+    "Short Claro##Short claro con tiras##./assets/img/short/short4/1.jpg°°./assets/img/short/short4/2.jpg",
+    "Short Deportivo##Short simple y fresco##./assets/img/short/short5/1.jpg°°./assets/img/short/short5/2.jpg",
+    "Short Moderno##Short moderno verano##./assets/img/short/short6/1.jpg°°./assets/img/short/short6/2.jpg",
+    "Short Casual##Short casual elegante##./assets/img/short/short7/1.jpg°°./assets/img/short/short7/2.jpg"
+
   ],
   [
     "Ropa Niño 1##Conjunto infantil de verano##./assets/img/ropa_de_niños/18a5ccbb-0261-4253-bb4c-393eb8de919b.jpg",

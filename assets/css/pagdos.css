@@ -2,6 +2,19 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html,body { height: 100%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background: #F0E7D6; color: #000; }
 
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.barrasup{
+    display: flex;
+    justify-content: center;
+    background-color: #172b7d;
+    color: #F0E7D6;
+    padding: 20px 0px;
+}
+
 /* Header */
 .isla {
   display:flex;
@@ -142,4 +155,21 @@ footer {
   .detalle .right { flex-basis:100%; }
   .detalle .left img { max-height:420px; }
   .tabla { padding:18px; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); }
+}
+
+#whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+#whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+#whatsapp-float img:hover {
+  transform: scale(1.1);
 }
