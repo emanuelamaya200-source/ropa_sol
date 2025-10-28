@@ -1,77 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primer pagina</title>
-  <link rel="stylesheet" href="./assets/css/pagdos.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AMYA</title>
+  <link rel="stylesheet" href="./assets/css/pagdos.css" />
 </head>
-
 <body>
+  <header class="isla">
+    <a class="home" href="../index.html" title="Home"><img src="../inconos/house (1).svg" alt="home"></a>
+    <h1>AMYA</h1>
+    <a class="perfil" href="../tercera pagina/tercerhtml.html" title="Perfil"><img src="../inconos/file-person-fill.svg" alt="perfil"></a>
+  </header>
 
-  <div id="paginados">
+  <nav class="estaciones" aria-label="Categorias">
+    <!-- Agregué aria-label para accesibilidad. Texto oculto intencionalmente. -->
+    <button id="item1" class="estacion" aria-label="Remeras"></button>
+    <button id="item2" class="estacion" aria-label="Pantalones"></button>
+    <button id="item3" class="estacion" aria-label="Shorts"></button>
+    <button id="item4" class="estacion" aria-label="Ropa niños"></button>
+  </nav>
 
-    <div class="isla">
-
-      <div class="itemis" id="pag3">
-        <a href="../index.html" target="_parent"><!--HOME-->
-          <p> <img src="../inconos/house (1).svg" alt=""> </p>
-        </a>
-      </div>
-
-      <div>
-        <P>VOIDWEAR</P>
-      </div>
-
-      <div class="itemis" id="pag1">
-        <a href="../tercera pagina/tercerhtml.html" id="perfilcrear">
-          <p> <img src="../inconos/file-person-fill.svg" alt=""> </p> <!--contactar -->
-        </a>
-      </div>
-
-    </div>
-
-    <!-- <h1>Articulos Informativos</h1> -->
-
-  <div class="estaciones">
-    <div id="item1" class="estacion">OTOÑO</div>
-    <div id="item2" class="estacion">INVIERNO</div>
-    <div id="item3" class="estacion">PRIMAVERA</div>
-    <div id="item4" class="estacion">VERANO</div>
-  </div>
-
-
-    <!-- 🔹 IMPORTANTE: acá le agregamos el id="tabla" -->
-    <div class="tabla" id="tabla">
-    </div>
-
-    <!--div pág 2-->
-  </div>
+  <main id="mainContent">
+    <section id="catalogo" class="tabla" aria-live="polite"></section>
+    <!-- Vista detalle (invisible hasta que se active) -->
+    <section id="detalle" class="detalle hidden"></section>
+  </main>
 
   <footer>
-    <p><strong>VOIDWEAR</strong></p>
-
+    <p><strong>AMYA</strong></p>
     <p>Rompemos el molde.</p>
-    <p>En VOIDWEAR no seguimos tendencias, las creamos. Nacimos de la calle y de la necesidad de expresar lo que
-      somos: actitud, libertad y estilo sin reglas. Cada prenda está pensada para acompañarte en tu día, en tu
-      movimiento, en tu historia.</p>
-    <p>© Copyright- 2025</p><br>
-
-    <a href="https://github.com/Nico-ceo/TrabajoPracticoIntegrador-Web.git" target="_blank"><img
-        src="./inconos/github.svg" alt=""></a>
-
-    <p>Creadores de esta pagina.</p>
-    <li><a href="https://github.com/Nico-ceo" target="_blank" id="perfilesgithub">Nicolas Miranda</a>
-    </li>
-    <li><a href="https://github.com/emanuelamaya200-source" target="_blank" id="perfilesgithub">Emanuel Amaya</a>
-    </li>
-
+    <p>© 2025</p>
+    <a href="https://github.com/Nico-ceo/TrabajoPracticoIntegrador-Web.git" target="_blank"><img src="./inconos/github.svg" alt="github"></a>
+    <p>Creadores:</p>
+    <ul>
+      <li><a href="https://github.com/Nico-ceo" target="_blank">Nicolas Miranda</a></li>
+      <li><a href="https://github.com/emanuelamaya200-source" target="_blank">Emanuel Amaya</a></li>
+    </ul>
   </footer>
 
-  <!-- 🔹 IMPORTANTE: carga tu JS después del contenido -->
   <script src="./assets/js/pagdos.js" defer></script>
-
 </body>
-
 </html>

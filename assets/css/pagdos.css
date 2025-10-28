@@ -1,188 +1,145 @@
-* {
-    color: white;
-    background-position: center;
-    background-size: contain;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+/* Reset / base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background: #F0E7D6; color: #000; }
 
-}
-
-body {
-    color: rgb(255, 142, 142);
-    margin-left: -10px;
-    margin-top: -5px;
-}
-
-#paginados {
-    background-color: #F0E7D6;
-}
-
-.item img {
-    width: 150px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-sizing: border-box;
-
-}
-
-.item p {
-    color: white;
-    margin-top: 10px;
-    text-align: center;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-
-.tabla {
-    display: flex;
-    justify-content: space-around;
-    margin: 8px 150px;
-}
-
-.tabla p{
-    color: #000000;
-    font-size: 11px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.tabla p:first-child{
-    font-size: 15px
-}
-
-.columna {
-    display: flex;
-    flex-direction: column;
-}
-
-.precio {
-    display: flex;
-    position: absolute;
-    left: 0%;
-    bottom: -10%;
-    background-color: red;
-    padding: 5px;
-    border-radius: 15px;
-    font-size: 27px;
-}
-
-
-/* titulo */
-h1 {
-    text-align: center;
-    font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-/* selecionar categoria*/
-#item1,
-#item2,
-#item3,
-#item4 {
-    border: 1px solid black;
-    padding-left: 90px;
-    padding-right: 90px;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    background-size: contain;
-    background-position: center;
-    display: flex;
-    flex-direction: row;
-}
-
-.estaciones {
-    display: flex;
-    flex-direction: row;
-    padding: 5px 200px;
-    justify-content: center;
-    .estacion {
-    cursor: pointer; /* Cambia el cursor a mano */
-    position: relative; /* Para pseudo-elementos */
-}
-}
-
-#item1 {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    background-image: url(../img/otoño.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#item4 {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    background-image: url(../img/verano.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#item2 {
-    background-image: url(../img/invierno.png);
-}
-
-#item3 {
-    background-image: url(../img/primavera.png);
-}
-/* Hacer las estaciones clickeables y visibles */
-.estacion {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 2;
-}
-
-/* Efecto hover para feedback visual */
-.estacion:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255,255,255,0.7);
-}
-
-/* Capa oscura para mejorar legibilidad del texto sobre las imágenes */
-.estacion::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.4);
-    border-radius: inherit;
-    z-index: -1;
-}
-
+/* Header */
 .isla {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid black;
-    padding: 0px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 28px;
+  background:#172b7d;
+  color:#F0E7D6;
+}
+.isla h1 { font-size:28px; letter-spacing:2px; }
+.isla img { width:28px; height:28px; }
 
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-    background-color: #172b7d;
-    color: #F0E7D6;
+/* Nav (estaciones) - grandes, solo imagen de fondo */
+.estaciones {
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  padding:18px;
+}
+.estacion {
+  width:180px;
+  height:130px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,0.12);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  cursor:pointer;
+  transition: transform .22s ease, box-shadow .22s ease;
+  outline: none;
+  font-size:0;
+}
+.estacion:hover { transform: translateY(-6px); box-shadow:0 10px 24px rgba(0,0,0,.12); }
+
+/* asignar imágenes (ajusta rutas si es necesario) */
+#item1 { background-image: url(../img/remeras.png); }
+#item2 { background-image: url(../img/pantalon.png); }
+#item3 { background-image: url(../img/short.png); }
+#item4 { background-image: url(../img/ropa_niños.png); }
+
+/* Catalogo: grid responsivo (imágenes más grandes) */
+.tabla {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+  padding:28px 80px;
+}
+.columna {
+  background: #fff;
+  border-radius:12px;
+  padding:14px;
+  text-align:center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+.columna p { color:#111; margin:10px 0; font-size:15px; }
+.columna .titulo { font-weight:700; font-size:17px; }
+
+/* imagen del producto (más grande, auto height) */
+.columna img {
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
+  background:#f5f5f5;
 }
 
+/* indicador de multiple imagenes */
+.carousel-ind {
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  margin-top:8px;
+  font-size:13px;
+  color:#333;
+}
+
+/* detalle view */
+.detalle {
+  padding:24px 80px;
+}
+.detalle.hidden { display:none; }
+.detalle .back {
+  display:inline-block;
+  margin-bottom:12px;
+  padding:8px 12px;
+  border-radius:8px;
+  background:#172b7d;
+  color:#fff;
+  cursor:pointer;
+}
+.detalle .wrap {
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+.detalle .left { flex:1 1 520px; }
+.detalle .right { flex:1 1 320px; }
+.detalle .left img {
+  width:100%;
+  max-height:640px;
+  height:auto;
+  object-fit:contain; /* importante: contiene la imagen sin recortarla */
+  border-radius:10px;
+  background: #fff;
+}
+.detalle .controls {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:8px;
+}
+.btn-arrow {
+  padding:10px 14px;
+  border-radius:8px;
+  background:#172b7d;
+  color:#fff;
+  cursor:pointer;
+  border:none;
+}
+
+/* footer */
 footer {
-    position: end;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #172b7d;
-    color: #F0E7D6;
-    text-align: center;
-    padding: 10px 0;
-
+  margin-top:30px;
+  padding:18px;
+  text-align:center;
+  background:#172b7d;
+  color:#F0E7D6;
 }
 
-#perfilesgithub {
-    text-decoration: none;
+/* responsive tweaks */
+@media (max-width:920px){
+  .columna img { height:260px; }
+  .estacion { width:140px; height:100px; }
+  .detalle .left { flex-basis:100%; }
+  .detalle .right { flex-basis:100%; }
+  .detalle .left img { max-height:420px; }
+  .tabla { padding:18px; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); }
 }
