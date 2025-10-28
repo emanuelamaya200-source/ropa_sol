@@ -1,0 +1,188 @@
+* {
+    color: white;
+    background-position: center;
+    background-size: contain;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+body {
+    color: rgb(255, 142, 142);
+    margin-left: -10px;
+    margin-top: -5px;
+}
+
+#paginados {
+    background-color: #F0E7D6;
+}
+
+.item img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+}
+
+.item p {
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.tabla {
+    display: flex;
+    justify-content: space-around;
+    margin: 8px 150px;
+}
+
+.tabla p{
+    color: #000000;
+    font-size: 11px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.tabla p:first-child{
+    font-size: 15px
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.precio {
+    display: flex;
+    position: absolute;
+    left: 0%;
+    bottom: -10%;
+    background-color: red;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 27px;
+}
+
+
+/* titulo */
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* selecionar categoria*/
+#item1,
+#item2,
+#item3,
+#item4 {
+    border: 1px solid black;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.estaciones {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 200px;
+    justify-content: center;
+    .estacion {
+    cursor: pointer; /* Cambia el cursor a mano */
+    position: relative; /* Para pseudo-elementos */
+}
+}
+
+#item1 {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-image: url(../img/otoño.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#item4 {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-image: url(../img/verano.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#item2 {
+    background-image: url(../img/invierno.png);
+}
+
+#item3 {
+    background-image: url(../img/primavera.png);
+}
+/* Hacer las estaciones clickeables y visibles */
+.estacion {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Efecto hover para feedback visual */
+.estacion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.7);
+}
+
+/* Capa oscura para mejorar legibilidad del texto sobre las imágenes */
+.estacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.isla {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 0px 20px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    background-color: #172b7d;
+    color: #F0E7D6;
+}
+
+footer {
+    position: end;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #172b7d;
+    color: #F0E7D6;
+    text-align: center;
+    padding: 10px 0;
+
+}
+
+#perfilesgithub {
+    text-decoration: none;
+}
